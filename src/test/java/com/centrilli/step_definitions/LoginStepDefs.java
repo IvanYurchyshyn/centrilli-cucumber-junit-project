@@ -9,13 +9,15 @@ import io.cucumber.java.en.When;
 public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
     @When("user log in with {string}")
-    public void user_log_in_with(String email) {
-        email = email.toLowerCase();
-        if (email.contains("pos")){
-            loginPage.loginInput.sendKeys(ConfigurationReader.getProperty("posEmail"));
-            loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("posPassword"));
+    public void user_log_in_with(String managerType) {
+        managerType = managerType.toLowerCase().replace("manager","");
+            if(managerType.contains("crm")){
+                managerType = managerType.replace("crm","");
+            }
+            loginPage.loginInput.sendKeys(ConfigurationReader.getProperty(managerType+"Email"));
+            loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty(managerType+"Password"));
             loginPage.submitButton.click();
-        }
+
     }
 
     @Given("user is on log in page")
