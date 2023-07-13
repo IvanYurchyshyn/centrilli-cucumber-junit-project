@@ -20,7 +20,7 @@ public class LoginStepDefs {
 
     }
 
-    @Given("user is on log in page")
+    @Given("user is on a log in page")
     public void userIsOnLogInPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
