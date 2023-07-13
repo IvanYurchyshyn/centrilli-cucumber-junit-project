@@ -7,9 +7,3 @@ Feature: Log in to application
       Given user log in with "event"
 
 
-    Scenario:
-      Given user is on a log in page
-
-    //Merhaba
-    //asdasd
-
