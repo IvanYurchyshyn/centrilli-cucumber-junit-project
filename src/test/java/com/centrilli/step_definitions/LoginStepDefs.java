@@ -8,15 +8,16 @@ import io.cucumber.java.en.When;
 
 public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
+
     @When("user log in with {string}")
     public void user_log_in_with(String managerType) {
-        managerType = managerType.toLowerCase().replace("manager","");
-            if(managerType.contains("crm")){
-                managerType = managerType.replace("crm","");
-            }
-            loginPage.loginInput.sendKeys(ConfigurationReader.getProperty(managerType+"Email"));
-            loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty(managerType+"Password"));
-            loginPage.submitButton.click();
+        managerType = managerType.toLowerCase().replace("manager", "");
+
+        managerType = managerType.replace("crm", "");
+
+        loginPage.loginInput.sendKeys(ConfigurationReader.getProperty(managerType + "Email"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty(managerType + "Password"));
+        loginPage.submitButton.click();
 
     }
 
