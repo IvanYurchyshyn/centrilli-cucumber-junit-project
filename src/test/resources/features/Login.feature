@@ -6,5 +6,10 @@ Feature: Log in to application
   Scenario: user should be able to log in
       Given user log in with "event"
 
+
+    Scenario:
+      Given user is on a log in page
+
     //Merhaba
     //asdasd
+
