@@ -1,6 +1,5 @@
-package com.centrilli.step_definitios;
+package com.centrilli.step_definitions;
 
-import com.centrilli.utilities.BrowserUtils;
 import com.centrilli.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;

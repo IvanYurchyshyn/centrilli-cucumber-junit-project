@@ -1,4 +1,4 @@
-package com.centrilli.step_definitios;
+package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage;
 import com.centrilli.utilities.ConfigurationReader;

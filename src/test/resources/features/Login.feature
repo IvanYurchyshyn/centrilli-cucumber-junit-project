@@ -4,4 +4,4 @@ Feature: Log in to application
     Given user is on log in page
 
   Scenario: user should be able to log in
-      When user log in with "posmanager"
+      Given user log in with "posmanager"
