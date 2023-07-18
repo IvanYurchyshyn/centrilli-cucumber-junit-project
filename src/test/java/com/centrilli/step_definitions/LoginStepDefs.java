@@ -9,8 +9,14 @@ import io.cucumber.java.en.When;
 public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
 
-    @When("user log in with {string}")
-    public void user_log_in_with(String managerType) {
+
+    @Given("user is on a log in page")
+    public void userIsOnLogInPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+    }
+
+    @Given("user is already logged in as {string} manager")
+    public void userIsAlreadyLoggedInAsManager(String managerType) {
         managerType = managerType.toLowerCase().replace("manager", "");
 
         managerType = managerType.replace("crm", "");
@@ -18,11 +24,5 @@ public class LoginStepDefs {
         loginPage.loginInput.sendKeys(ConfigurationReader.getProperty(managerType + "Email"));
         loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty(managerType + "Password"));
         loginPage.submitButton.click();
-
-    }
-
-    @Given("user is on a log in page")
-    public void userIsOnLogInPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 }

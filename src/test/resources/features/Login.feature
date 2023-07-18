@@ -4,6 +4,6 @@ Feature: Log in to application
     Given user is on a log in page
 
   Scenario: user should be able to log in
-      Given user log in with "event"
+      Given user is already logged in as "event" manager
 
 
