@@ -18,6 +18,7 @@ public class LoginStepDefs {
     //updated
     @Given("user is already logged in as {string} manager")
     public void userIsAlreadyLoggedInAsManager(String managerType) {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         managerType = managerType.toLowerCase().replace("manager", "");
 
         managerType = managerType.replace("crm", "");
