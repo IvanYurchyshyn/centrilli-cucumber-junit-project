@@ -15,6 +15,7 @@ public class LoginStepDefs {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
+    //updated
     @Given("user is already logged in as {string} manager")
     public void userIsAlreadyLoggedInAsManager(String managerType) {
         managerType = managerType.toLowerCase().replace("manager", "");
@@ -24,5 +25,6 @@ public class LoginStepDefs {
         loginPage.loginInput.sendKeys(ConfigurationReader.getProperty(managerType + "Email"));
         loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty(managerType + "Password"));
         loginPage.submitButton.click();
+
     }
 }
