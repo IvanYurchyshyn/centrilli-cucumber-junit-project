@@ -3,7 +3,7 @@ Feature: Get the right info on the sales page
 
   Scenario: user should see expected columns on sales page
     Given user is already logged in as "sales" manager
-    When user click Sale on module
+    When user click Sales on module
     Then user should see the Quotation Number row
     Then user should see the Quotation Date row
     Then user should see the Customer row
@@ -15,3 +15,4 @@ Feature: Get the right info on the sales page
     Given user is already logged in as "sales" manager
     When user enters Quotation Number Data
     Then user should see the result on the list
+#BUG BUG BUG
