@@ -1,6 +1,7 @@
 package com.centrilli.step_definitions;
 
-import com.centrilli.pages.US03_CalendarPage;
+import com.centrilli.pages.HomePage;
+import com.centrilli.pages.CalendarPage;
 import com.centrilli.utilities.BrowserUtils;
 
 import io.cucumber.java.en.Given;
@@ -13,9 +14,10 @@ import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
-public class US03_Calendar_StepDefs {
+public class US03_Atacan_StepDefs {
 
-    US03_CalendarPage calendarPage = new US03_CalendarPage();
+    CalendarPage calendarPage = new CalendarPage();
+    HomePage homePage = new HomePage();
 
     @Then("user clicks Calendar on module")
     public void user_clicks_calendar_on_module() {
@@ -37,7 +39,7 @@ public class US03_Calendar_StepDefs {
 
         String currentDay = today.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
 
-        BrowserUtils.sleep(1);
+        BrowserUtils.loadingBarInvisibility(homePage.loadingBar);
         Assert.assertEquals(currentDay, calendarPage.actualDay.getText());
 
 

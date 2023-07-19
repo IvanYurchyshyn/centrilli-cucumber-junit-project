@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class US03_CalendarPage {
+public class CalendarPage {
 
-    public US03_CalendarPage() {
+    public CalendarPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
