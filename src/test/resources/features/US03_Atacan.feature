@@ -1,5 +1,5 @@
 @B29G29-193
-Feature: Calendar page daily, weekly and monthly.
+Feature: Calendar page daily, weekly and monthly
 
   Background: User logs in and clicks Calendar
     Given user is already logged in as "pos" manager
@@ -12,7 +12,7 @@ Feature: Calendar page daily, weekly and monthly.
     Then user sees current day
 
   @B29G29-247
-  Scenario: User sees the calendar as a weekly (as a default)
+  Scenario: User sees the calendar as a Weekly (as a default)
     Given user sees Week button is selected
     Then user sees current week
 
