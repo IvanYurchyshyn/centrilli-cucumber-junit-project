@@ -204,15 +204,13 @@ public class BrowserUtils {
     /**
      * Waits for element matching the locator to be clickable
      *
-     * @param locator
-     * @param time
      * @return
      */
-    public static WebElement waitForClickablility(By locator, int time) {
+ /*   public static WebElement waitForClickablility() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
+*/
     /**
      * waits for backgrounds processes on the browser to complete
      *
