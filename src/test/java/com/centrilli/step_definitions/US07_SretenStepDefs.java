@@ -18,26 +18,27 @@ public class US07_SretenStepDefs {
     public void user_should_see_the_quotation_number_row()
     {
         BrowserUtils.sleep(5);
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Quotation Number']"));
+        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.quotationNumberRow);
     }
     @Then("user should see the Quotation Date row")
     public void user_should_see_the_quotation_date_row() {
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Quotation Date']"));    }
+        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.quotationDateRow);
+    }
     @Then("user should see the Customer row")
     public void user_should_see_the_customer_row() {
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Customer']"));
+            BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.customerRow);
     }
     @Then("user should see the Salesperson row")
     public void user_should_see_the_salesperson_row() {
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Salesperson']"));
+            BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.salespersonRow);
     }
     @Then("user should see the Total row")
     public void user_should_see_the_total_row() {
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Total']"));
+            BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.totalRow);
     }
     @Then("user should see the Status row")
     public void user_should_see_the_status_row() {
-        BrowserUtils.verifyElementDisplayed(By.xpath("//th[.='Status']"));
+            BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.statusRow);
     }
 
 
@@ -50,7 +51,11 @@ public class US07_SretenStepDefs {
 
     @Then("user should see the result on the list")
     public void userShouldSeeTheResultOnTheList() {
+        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.quotationNumberRow);
 
 
     }
-}
+
+
+    }
+

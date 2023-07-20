@@ -18,9 +18,7 @@ Feature: Default
 	Scenario: 2. Verify sales manager can see the result on the list when searching with Quotation Number data.
 		Given user is already logged in as "sales" manager
 		    When user enters Quotation Number Data
-		    Then user should see the result on the listGiven user is already logged in as "sales" manager
-		    When user enters Quotation Number Data
-		    Then user should see the result on the list	
+		    Then user should see the result on the list
 
 	
 	@B29G29-249
