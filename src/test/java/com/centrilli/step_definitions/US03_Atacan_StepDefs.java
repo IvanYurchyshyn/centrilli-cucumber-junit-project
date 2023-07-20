@@ -23,8 +23,8 @@ public class US03_Atacan_StepDefs {
 
     LocalDate today = LocalDate.now();
 
-    @Then("user clicks Calendar on module")
-    public void user_clicks_calendar_on_module() {
+    @Then("user click on Calendar module")
+    public void user_click_on_calendar_on_module() {
         calendarPage.calendarModule.click();
     }
 
