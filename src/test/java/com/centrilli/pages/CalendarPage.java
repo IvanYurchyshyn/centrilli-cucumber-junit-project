@@ -19,6 +19,21 @@ public class CalendarPage {
     @FindBy(xpath = "//button[.='Day']")
     public WebElement dayButton;
 
-    @FindBy(xpath = "//th[contains(@class, 'fc-day-header')]/span")
-    public WebElement actualDay;
+    @FindBy(xpath = "//button[@class=\"o_calendar_button_day btn btn-sm btn-default active\"]")
+    public  WebElement selectedDayButton;
+
+    @FindBy(xpath = "//ol[@class='breadcrumb']/li")
+    public WebElement actualDate;
+
+
+    @FindBy(xpath = "//button[@class=\"o_calendar_button_week btn btn-sm btn-default active\"]")
+    public  WebElement selectedWeekButton;
+
+    @FindBy(xpath = "//button[.='Month']")
+    public WebElement monthButton;
+
+    @FindBy(xpath = "//button[@class=\"o_calendar_button_month btn btn-sm btn-default active\"]")
+    public  WebElement selectedMonthButton;
+
+
 }
