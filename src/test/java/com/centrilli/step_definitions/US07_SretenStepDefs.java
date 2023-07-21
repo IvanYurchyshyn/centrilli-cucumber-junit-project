@@ -51,11 +51,19 @@ public class US07_SretenStepDefs {
 
     @Then("user should see the result on the list")
     public void userShouldSeeTheResultOnTheList() {
-        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.quotationNumberRow);
+        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.notRightPage);
 
 
     }
 
+    @When("user click Sale on module")
+    public void userClickSaleOnModule() {
+    }
+
+    @Then("user clicks Sales on module")
+    public void userClicksSalesOnModule() {
+        salesRowsPageSreten.sales1.click();
 
     }
+}
 

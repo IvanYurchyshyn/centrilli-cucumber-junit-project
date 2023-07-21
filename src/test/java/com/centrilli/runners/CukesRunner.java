@@ -15,8 +15,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/centrilli/step_definitions",
         dryRun = false,
-        tags = "@B29G29-239"
-        ,
+
+        tags = "",
+
         publish = true
 
 
