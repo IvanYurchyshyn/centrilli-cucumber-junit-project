@@ -8,9 +8,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class CalendarPage extends BasePage {
 
-
-
-
     @FindBy(xpath = "//span[normalize-space(.)='Calendar']")
     public WebElement calendarModule;
 
@@ -23,7 +20,6 @@ public class CalendarPage extends BasePage {
     @FindBy(xpath = "//ol[@class='breadcrumb']/li")
     public WebElement actualDate;
 
-
     @FindBy(xpath = "//button[@class=\"o_calendar_button_week btn btn-sm btn-default active\"]")
     public  WebElement selectedWeekButton;
 
@@ -32,6 +28,5 @@ public class CalendarPage extends BasePage {
 
     @FindBy(xpath = "//button[@class=\"o_calendar_button_month btn btn-sm btn-default active\"]")
     public  WebElement selectedMonthButton;
-
 
 }
