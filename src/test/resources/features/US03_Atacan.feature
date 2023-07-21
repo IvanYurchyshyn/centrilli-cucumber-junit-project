@@ -23,5 +23,3 @@ Feature: Calendar page daily, weekly and monthly
     And user sees Month button is selected
     Then user sees current month
 
-
-

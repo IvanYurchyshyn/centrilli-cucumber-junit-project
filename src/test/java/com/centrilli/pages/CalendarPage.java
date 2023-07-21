@@ -1,17 +1,12 @@
 package com.centrilli.pages;
 
-import com.centrilli.utilities.Driver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 
-public class CalendarPage {
 
-    public CalendarPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
+public class CalendarPage extends BasePage {
 
     @FindBy(xpath = "//span[normalize-space(.)='Calendar']")
     public WebElement calendarModule;
@@ -25,7 +20,6 @@ public class CalendarPage {
     @FindBy(xpath = "//ol[@class='breadcrumb']/li")
     public WebElement actualDate;
 
-
     @FindBy(xpath = "//button[@class=\"o_calendar_button_week btn btn-sm btn-default active\"]")
     public  WebElement selectedWeekButton;
 
@@ -34,6 +28,5 @@ public class CalendarPage {
 
     @FindBy(xpath = "//button[@class=\"o_calendar_button_month btn btn-sm btn-default active\"]")
     public  WebElement selectedMonthButton;
-
 
 }

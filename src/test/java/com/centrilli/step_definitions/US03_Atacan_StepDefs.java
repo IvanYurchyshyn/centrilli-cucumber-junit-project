@@ -90,5 +90,4 @@ public class US03_Atacan_StepDefs {
         Assert.assertEquals(expectedMonth, calendarPage.actualDate.getText());
     }
 
-
 }
