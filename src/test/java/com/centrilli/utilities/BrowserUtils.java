@@ -1,5 +1,6 @@
 package com.centrilli.utilities;
 
+import com.centrilli.pages.HomePage;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BrowserUtils {
-    public static void sleep(int seconds){
+
+
+    public static void loadingBarInvisibility(WebElement loadingBar) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(loadingBar));
+    }
+
+    public static void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
         } catch (InterruptedException e) {
@@ -21,12 +29,13 @@ public class BrowserUtils {
         }
     }
 
-    public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle){
+
+    public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle) {
 
         for (String each : Driver.getDriver().getWindowHandles()) {
 
             Driver.getDriver().switchTo().window(each);
-            if (Driver.getDriver().getCurrentUrl().contains(expectedInUrl)){
+            if (Driver.getDriver().getCurrentUrl().contains(expectedInUrl)) {
                 break;
             }
         }
@@ -35,19 +44,21 @@ public class BrowserUtils {
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 
-    public static void verifyTitle (String expectedTitle){
-        Assert.assertEquals(Driver.getDriver().getTitle(),expectedTitle);
+    public static void verifyTitle(String expectedTitle) {
+        Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
     }
-    public static void verifyTitleContains (String expectedInTitle){
+
+    public static void verifyTitleContains(String expectedInTitle) {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
     }
 
     /**
      * This method accepts a dropdown element and returns a List<String> that contains all options values as String.
+     *
      * @param dropdownElement
      * @return actualMonth_as_STRING
      */
-    public static List<String> dropdownOptions_as_STRING(WebElement dropdownElement){
+    public static List<String> dropdownOptions_as_STRING(WebElement dropdownElement) {
 
         Select month = new Select(dropdownElement);
         //Storing all the ACTUAL options into a List of WebElements
@@ -67,9 +78,9 @@ public class BrowserUtils {
 
     }
 
-    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue){
+    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue) {
         for (WebElement each : radioButtons) {
-            if(each.getAttribute("value").equalsIgnoreCase(attributeValue)){
+            if (each.getAttribute("value").equalsIgnoreCase(attributeValue)) {
                 each.click();
             }
         }
@@ -77,14 +88,16 @@ public class BrowserUtils {
 
     /**
      * This method will accept a String as expected value and verify actual URL CONTAINS the value.
+     *
      * @param expectedInURL
      */
-    public static void verifyURLContains(String expectedInURL){
+    public static void verifyURLContains(String expectedInURL) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
     /**
      * Switches to new window by the exact title. Returns to original window if target title not found
+     *
      * @param targetTitle
      */
     public static void switchToWindow(String targetTitle) {
@@ -339,6 +352,7 @@ public class BrowserUtils {
 
     /**
      * Highlighs an element by changing its background and border color
+     *
      * @param element
      */
     public static void highlight(WebElement element) {
@@ -434,8 +448,9 @@ public class BrowserUtils {
     }
 
     /**
-     *  checks that an element is present on the DOM of a page. This does not
-     *    * necessarily mean that the element is visible.
+     * checks that an element is present on the DOM of a page. This does not
+     * * necessarily mean that the element is visible.
+     *
      * @param by
      * @param time
      */

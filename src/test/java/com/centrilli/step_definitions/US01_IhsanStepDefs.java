@@ -82,8 +82,8 @@ public class US01_IhsanStepDefs {
     public void thePosmanagerGetsTheMessageForAtLeastOneBlankField(String arg0) {
 
         // Then The posmanager gets the "Please fill out this field." message for at least one blank field.
-        //WebElement errorMessage = driver.findElement(By.className("oe_form_required"));
-        //assert errorMessage.isDisplayed();
+       // Driver.getDriver().findElement(By.xpath("//a[@class='button new']")).click();
+
         //System.out.println("POS Manager Scenario: " + errorMessage.getText());
     }
 

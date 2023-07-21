@@ -21,12 +21,12 @@ public class Driver {
                 case "chrome":
                     driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                     break;
                 case "firefox":
                     driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                     break;
                 case "headless-chrome":
                     // WebDriverManager.chromedriver().setup();
@@ -34,7 +34,7 @@ public class Driver {
                     option.addArguments("--headless=new");
                     driverPool.set(new ChromeDriver(option));
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                     break;
             }
 
