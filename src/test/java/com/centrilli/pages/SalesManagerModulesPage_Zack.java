@@ -106,14 +106,21 @@ public class SalesManagerModulesPage_Zack {
     public WebElement customer2; // when we click customers, customers are shown in Kanban style by default (not list). This locater is for Kanban style.
 
     //Customer Form Buttons, Boxes:
-    @FindBy(xpath = "//*[@id=\"radio8419_person\"]")
-    public WebElement individiualRadioButton;
+    @FindBy(xpath = "//*[@class=\"o_field_radio o_horizontal o_field_widget oe_edit_only\"]//div[1]/input")
+    public WebElement individualRadioButton;
 
-    @FindBy(xpath = "//*[@id=\"radio8419_company\"]")
+    @FindBy(xpath = "//*[@class=\"o_field_radio o_horizontal o_field_widget oe_edit_only\"]//div[2]/input")
     public WebElement companyRadioButton;
 
     @FindBy(xpath = "//*[@id=\"o_field_input_36\"]/../span")
     public WebElement companyDropdown;
+
+    @FindBy(xpath = "//*[@class=\"ui-autocomplete ui-front ui-menu ui-widget ui-widget-content\"][1]/li[7]/a")
+    public WebElement companyDropdownChoice;
+
+    @FindBy(xpath = "//*[@class=\"oe_title\"]//div[3]/div/div/input")
+    public WebElement companyDropdownInputField;
+
 
     @FindBy(xpath = "//*[@id=\"o_field_input_8366\"]")
     public WebElement streetInputBox;
@@ -125,7 +132,7 @@ public class SalesManagerModulesPage_Zack {
     public WebElement cityInputBox;
 
     @FindBy(xpath = "//*[@name=\"state_id\"]//span")
-    public WebElement stateDropdown;
+    public WebElement stateDropdownButton;
 
     @FindBy(xpath = "//*[@id=\"o_field_input_43\"]")
     public WebElement zipInputBox;
@@ -156,5 +163,8 @@ public class SalesManagerModulesPage_Zack {
 
     @FindBy(xpath = "//*[@id=\"o_field_input_54\"]")
     public WebElement languageDropdown;
+
+    @FindBy(xpath = "//*[@class=\"o_cp_buttons\"]//div/div[2]/button[1]")
+    public WebElement editSaveButton;
 
 }
