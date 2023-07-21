@@ -56,6 +56,14 @@ public class US07_SretenStepDefs {
 
     }
 
+    @When("user click Sale on module")
+    public void userClickSaleOnModule() {
+    }
+
+    @Then("user clicks Sales on module")
+    public void userClicksSalesOnModule() {
+        salesRowsPageSreten.sales1.click();
 
     }
+}
 
