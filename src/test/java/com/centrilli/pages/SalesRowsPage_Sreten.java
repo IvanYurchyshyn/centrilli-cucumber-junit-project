@@ -32,6 +32,8 @@ public class SalesRowsPage_Sreten {
     @FindBy (css = "a[data-menu='445'] span[class='oe_menu_text']")
     public WebElement sales1;
 
+    @FindBy (css = "a[data-menu='445'] span[class='oe_menu_text1']")
+    public WebElement notRightPage;
 
 }///html/body/nav/div[2]/ul[1]/li[6]/a/span/html/body/nav/div[2]/ul[1]/li[6]/a/span
 

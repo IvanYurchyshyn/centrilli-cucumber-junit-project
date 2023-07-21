@@ -51,7 +51,7 @@ public class US07_SretenStepDefs {
 
     @Then("user should see the result on the list")
     public void userShouldSeeTheResultOnTheList() {
-        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.quotationNumberRow);
+        BrowserUtils.verifyElementDisplayed(salesRowsPageSreten.notRightPage);
 
 
     }
