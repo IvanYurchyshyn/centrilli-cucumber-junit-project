@@ -80,4 +80,91 @@ public class SalesManagerModulesPage_Zack {
     @FindBy(xpath = "//*[@id=\"menu_more_container\"]/a")
     public WebElement dropDown;
 
+
+    @FindBy(xpath = "//*[@class=\"o_sub_menu\"]/div[1]/div[6]/ul[1]/li[3]/a")
+    public WebElement customersButton;
+
+    @FindBy(xpath = "//*[@class=\"o_main\"]/div[2]/div[1]/div[2]/div[1]//button[1]")
+    public WebElement createButton;
+
+    @FindBy(css = "button[class=\"btn btn-primary btn-sm o_form_button_edit\"]")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//*[@class=\"o_main\"]/div[2]//h1/input")
+    public WebElement nameInputBox;
+
+    @FindBy(xpath = "//*[@class=\"oe_title\"]/h1/span")
+    public WebElement nameInfo;
+
+    @FindBy(xpath = "//*[@class=\"o_form_buttons_edit\"]/button[1]")
+    public WebElement customersSaveButton;
+
+    @FindBy(xpath = "//*[@class=\"o_main_content\"]/div[2]/div/div/div/div[1]")
+    public WebElement customerForm;
+
+    @FindBy(xpath = "//*[@class=\"oe_kanban_global_click o_res_partner_kanban o_kanban_record\"][2]")
+    public WebElement customer2; // when we click customers, customers are shown in Kanban style by default (not list). This locater is for Kanban style.
+
+    //Customer Form Buttons, Boxes:
+    @FindBy(xpath = "//*[@class=\"o_field_radio o_horizontal o_field_widget oe_edit_only\"]//div[1]/input")
+    public WebElement individualRadioButton;
+
+    @FindBy(xpath = "//*[@class=\"o_field_radio o_horizontal o_field_widget oe_edit_only\"]//div[2]/input")
+    public WebElement companyRadioButton;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_36\"]/../span")
+    public WebElement companyDropdown;
+
+    @FindBy(xpath = "//*[@class=\"ui-autocomplete ui-front ui-menu ui-widget ui-widget-content\"][1]/li[7]/a")
+    public WebElement companyDropdownChoice;
+
+    @FindBy(xpath = "//*[@class=\"oe_title\"]//div[3]/div/div/input")
+    public WebElement companyDropdownInputField;
+
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_8366\"]")
+    public WebElement streetInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_8367\"]")
+    public WebElement street2InputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_8368\"]")
+    public WebElement cityInputBox;
+
+    @FindBy(xpath = "//*[@name=\"state_id\"]//span")
+    public WebElement stateDropdownButton;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_43\"]")
+    public WebElement zipInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_45\"]")
+    public WebElement tinInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_46\"]/../span")
+    public WebElement tagsDropdown;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_47\"]")
+    public WebElement jobPositionInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_48\"]")
+    public WebElement phoneInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_49\"]")
+    public WebElement mobileInputBox;
+
+    @FindBy(xpath ="//*[@id=\"o_field_input_51\"]")
+    public WebElement mailIputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_52\"]")
+    public WebElement websiteInputBox;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_53\"]/../span")
+    public WebElement titleDropdown;
+
+    @FindBy(xpath = "//*[@id=\"o_field_input_54\"]")
+    public WebElement languageDropdown;
+
+    @FindBy(xpath = "//*[@class=\"o_cp_buttons\"]//div/div[2]/button[1]")
+    public WebElement editSaveButton;
+
 }
