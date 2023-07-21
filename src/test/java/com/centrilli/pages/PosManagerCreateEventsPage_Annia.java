@@ -40,7 +40,6 @@ public class PosManagerCreateEventsPage_Annia {
 
     public void eventDetails(){
         summaryTextBox.sendKeys("meeting");
-      //  summaryTextBox.clear();
     }
 
     @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
@@ -51,9 +50,7 @@ public class PosManagerCreateEventsPage_Annia {
 
     @FindBy(xpath = "//div[@class=\'fc-content\']")
     public WebElement locatingEventCreatedBox;
-    /* @FindBy(xpath = "//a[@class='fc-day-grid-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable o_calendar_color_6']")
 
-*/
 
     @FindBy(xpath = "//label[.='All Day']")
     public WebElement popUpWindowWithEvent;
